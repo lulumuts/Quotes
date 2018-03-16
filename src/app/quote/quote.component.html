@@ -1,0 +1,10 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <h2>Your one stop shop for inspirational quotes you believe in and can vote on!</h2>
+  <div class="row">
+<app-quote-form (addQuote)="addnewQuote($event)"></app-quote-form>
+</div>
+<p *ngFor="let quote of quotes">Your favorite Quotes {{quote.name}} </p>
+</div>
