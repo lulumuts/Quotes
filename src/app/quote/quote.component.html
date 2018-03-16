@@ -6,5 +6,12 @@
   <div class="row">
 <app-quote-form (addQuote)="addnewQuote($event)"></app-quote-form>
 </div>
-<p *ngFor="let quote of quotes">Your favorite Quotes {{quote.name}} </p>
+<div *ngFor="let quote of quotes">
+  <ul>
+    <li>{{quote.name}}</li>
+    <li>{{quote.author}}</li>
+    <li>{{quote.description}}</li>
+  </ul>
+
+</div>
 </div>
