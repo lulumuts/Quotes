@@ -18,6 +18,7 @@ import { VotesComponent } from './votes/votes.component';
     QuoteDetailsComponent,
     QuoteComponent,
     VotesComponent,
+    TimeAgoPipe,
     // VoteDirective
   ],
   imports: [
