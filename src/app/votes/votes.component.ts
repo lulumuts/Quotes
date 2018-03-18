@@ -8,8 +8,12 @@ import {Quote} from '../quote';
 })
 export class VotesComponent implements OnInit {
   upvote: number=0;
+  downvote:number=0;
   increment() {
     this.upvote++;
+  }
+  decrement() {
+    this.downvote++;
   }
 
   constructor() {
