@@ -4,7 +4,7 @@
   </h1>
   <h2>Your one stop shop for inspirational quotes you believe in and can vote on!</h2>
   <div class="row">
-    {{today|date}}
+  
 <app-quote-form (addQuote)="addnewQuote($event)"></app-quote-form>
 </div>
 <div *ngFor="let quote of quotes">
