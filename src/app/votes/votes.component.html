@@ -1,11 +1,12 @@
 <div class="counter">
   <!-- <div class="counter__container"> -->
-    <input type="number" class="count__input" [value]="downvote">
-    <button class="btn btn-danger" (click)="decrement();" class="counter__button">UpVote this Quote :)</button>
+    <input type="number" class="count__input" [value]="upvote">
+    <button class="btn btn-danger" (click)="increment();" class="counter__button">UpVote this Quote :)</button>
 
-  <input type="text" class="count__input" [value]="upvote">
-  <button class="btn btn-danger" (click)="increment();" class="counter__button">DownVote this Quote :(</button>
+  <input type="text" class="count__input" [value]="downvote">
+  <button class="btn btn-danger" (click)="decrement();" class="counter__button">DownVote this Quote :(</button>
+
+  
 
   <!-- </div> -->
 </div>
-{{quote.name | timeAgo}}

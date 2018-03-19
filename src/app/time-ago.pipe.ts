@@ -1,35 +1,30 @@
-import { OnDestroy, ChangeDetectorRef, Pipe, PipeTransform } from '@angular/core';
-
-
+import {  Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'timeAgo',
-  pure: false
+  name: 'Timeago',
+
 })
-export class TimeAgoPipe implements PipeTransform, OnDestroy {
-  private readonly async: AsyncPipe;
 
-  private isDestroyed = false;
-  private value: Date;
-  private timer: Observable<string>;
-
-
-  transform(obj: any, args?: any[]): any {
-
-
-  private elapsed():string {
-    let now = this.now().getTime();
-
-    let delta = (now - this.value.getTime())/1000;
-
-    if(delta < 60) {
-      return `${Math.floor(delta)}s ago` ;
-    } else if (delta < 3600) {
-      return `${Math.floor(delta/60)}m ago`;
-    } else if (delta < 86400) {
-      return `${Math.floor(delta/3600)}h ago`;
-    } else {
-      return `${Math.floor(delta/ 86400)}d ago`;
-    }
-  }
+export class TimeAgoPipe {
+  today = Date.now();
+  fixedTimezone = '2015-06-15T09:03:01+0900';
 }
+
+
+//   transform(value:any): number{
+//   let today:Date=new Date();
+//   let todayWithNoTime:any = new Date(today.getFullYear(),today.getMonth(), today.getDate())
+//   var dateDifference =Math.abs(value-todayWithNoTime )
+//   const secondsInADay=86400;
+//
+//     var dateDifferenceSeconds=dateDifference*0.001; //converts to seconds
+//
+//     var dateCounter = dateDifferenceSeconds/secondsInADay;
+//
+//     if (dateCounter >= 1 ){
+//       return dateCounter;
+//     }else{
+//       return 0;
+//     }
+//   }
+// }

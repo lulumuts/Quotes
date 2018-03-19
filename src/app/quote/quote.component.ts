@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {Quote} from '../quote';
 
 @Component({
@@ -13,8 +13,11 @@ export class QuoteComponent implements OnInit {
   addnewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id=quoteLength+1;
-    this.quotes.push(quote)
+    this.quotes.push(quote);
+
   }
+
+
   constructor() { }
 
   ngOnInit() {
